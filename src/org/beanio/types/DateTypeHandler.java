@@ -54,14 +54,6 @@ public class DateTypeHandler extends DateTypeHandlerSupport {
     
     /*
      * (non-Javadoc)
-     * @see org.beanio.types.TypeHandler#format(java.lang.Object)
-     */
-    public String format(Object value) {
-        return super.formatDate((Date)value);
-    }
-    
-    /*
-     * (non-Javadoc)
      * @see org.beanio.types.TypeHandler#getType()
      */
     public Class<?> getType() {

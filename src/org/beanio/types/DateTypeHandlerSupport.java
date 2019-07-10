@@ -61,13 +61,4 @@ public abstract class DateTypeHandlerSupport extends GeneralDateTypeSupport {
         }
         return date;
     }
-
-    /**
-     * Converts a {@link Date} to text.
-     * @param date the {@link Date} to convert
-     * @return the formatted text
-     */
-    protected String formatDate(Date date) {
-        return date == null ? null : getFormat().format(date);
-    }
 }

@@ -2,6 +2,7 @@ package org.beanio.types;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.TimeZone;
 
@@ -152,6 +153,14 @@ public abstract class GeneralDateTypeSupport extends LocaleSupport implements Co
         catch (CloneNotSupportedException e) {
             throw new IllegalStateException(e);
         }
+    }
+
+    /*
+     * (non-Javadoc)
+     * @see org.beanio.types.TypeHandler#format(java.lang.Object)
+     */
+    public String format(Date value) {
+        return value == null ? null : getFormat().format(value);
     }
 }
 
